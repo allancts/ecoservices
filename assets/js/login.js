@@ -2,20 +2,20 @@ $(document).ready(function(){
     var isPro = false;
     var url = 'loginPar';
     var tokenName = 'ecoservicesTokenPar';
-    var hrefUrl = "D:/CoursG4/Projet 2/ecoservices/pages/particulier/cataloguePar.html";
+    var hrefUrl = "../pages/particulier/cataloguePar.html";
 
     $("#loginPar").click(function() {
         isPro = false;
         url = 'loginPar';
         tokenName = 'ecoservicesTokenPar';
-        hrefUrl = "D:/CoursG4/Projet 2/ecoservices/pages/particulier/cataloguePar.html";
+        hrefUrl = "../pages/particulier/cataloguePar.html";
         document.getElementById('info').textContent = "Particulier";
     });
     $("#loginPro").click(function() {
         isPro = true;
         url = 'loginPro';
         tokenName = 'ecoservicesTokenPro';
-        hrefUrl = "D:/CoursG4/Projet 2/ecoservices/pages/professionel/cataloguePro.html";
+        hrefUrl = "../pages/professionel/cataloguePro.html";
         document.getElementById('info').textContent = "Professionel";
     });
 

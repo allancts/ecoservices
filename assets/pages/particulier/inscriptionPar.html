@@ -14,6 +14,10 @@
   <!--=============== CSS ===============-->
   <link rel="stylesheet" href="../css/styles.css">
 
+  <!--=============== JS ===============-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="../../js/particulier/inscriptionPar.js"></script>
+
   <title>EcoService</title>
 </head>
 
@@ -51,7 +55,7 @@
   <div class="products__connexion   ">
     <div class="container">
       <div class="login__content">  
-        <form action="" class="login__form">
+        <form autocomplete="off" class="login__form">
           <div>
             <h1 class="login__title"><span>Welcome</h1>
             <p class="login__description">Fiche d'inscription</p>
@@ -60,34 +64,36 @@
           <div>
             <div class="login__inputs">
               <div>
-                <label for="" class="login__label">Nom</label>
+                <label for="" class="login__label">Nom *</label>
                 <input
                   type="text"
                   placeholder="Entrer votre nom de famille"
-                  required
                   class="login__input"
+                  id="input-nom"
                 />
               </div>
 
               <div>
-                <label for="" class="login__label">Prénom</label>
+                <label for="" class="login__label">Prénom *</label>
                 <div class="login__box">
                   <input
                     type="text"
                     placeholder="Entrer votre prénom"
                     required
                     class="login__input"
+                    id="input-prenom"
                   />
                 </div>
               </div>
 
               <div>
-                <label for="" class="login__label">Email</label>
+                <label for="" class="login__label">Email *</label>
                 <input
                   type="email"
                   placeholder="Entrer votre adresse e-mail"
                   required
                   class="login__input"
+                  id="input-mail"
                 />
               </div>
 
@@ -99,6 +105,7 @@
                     placeholder="Entrer votre adresse"
                     required
                     class="login__input"
+                    id="input-adr"
                   />
                 </div>
               </div> 
@@ -111,6 +118,7 @@
                     placeholder="Entrer votre vile"
                     required
                     class="login__input"
+                    id="input-ville"
                   />
                 </div>
               </div> 
@@ -122,9 +130,9 @@
                     type="number"
                     placeholder="Entrer votre code postal"
                     required
+                    min="0"
                     class="login__input"
-                    min="1" 
-                    max="5"
+                    id="input-cp"
                   />
                 </div>
               </div>
@@ -137,6 +145,7 @@
                     placeholder="Entrer votre pays"
                     required
                     class="login__input"
+                    id="input-pays"
                   />
                 </div>
               </div>
@@ -149,12 +158,13 @@
                     placeholder="Entrer votre numéro de télephone"
                     required
                     class="login__input"
+                    id="input-tel"
                   />
                 </div>
               </div> 
 
               <div>
-                <label for="" class="login__label">Password</label>
+                <label for="" class="login__label">Password *</label>
                 <div class="login__box">
                   <input
                     type="password"
@@ -170,7 +180,7 @@
             </div>
 
             <div class="login__check">
-              <input type="checkbox" class="login__check-input" />
+              <input type="checkbox" class="login__check-input" id="input-check"/>
               <label for="" class="login__check-label">En cochant cette case, vous respectez les conditions d'utilisateurs de EcoService
               </label>
             </div>
@@ -187,7 +197,7 @@
               <button type="button" id="butInscription" class="login__button">Inscription</button>
             </div>
           </div>
-
+          <h3 style="color:red"><span id="error"></span></h3>
         </form>
       </div>
     </div>
