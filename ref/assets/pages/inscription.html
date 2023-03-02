@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="assets/public/favicon.png" type="image/x-icon">
+
+  <!--=============== REMIXICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <title>EcoService</title>
+</head>
+
+<body>
+  <!--==================== HEADER ====================-->
+  <header class="header" id="header">
+    <div class="header__border"></div>
+
+    <nav class="nav container">
+      <a href="../../index.html" class="nav__logo">
+        <img src="../public/favicon.png" alt="logo">
+        EcoService
+      </a>
+
+      <div class="nav__menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./assets/pages/connexion.html" class="nav__link active-link">
+              <i class="ri-home-5-fill"></i>
+              <span>Connexion</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <i class="ri-award-fill"></i>
+              <span>Inscription</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!--==================== FORM CONNEXION ====================-->
+  <div class="products__connexion   ">
+    <div class="container">
+      <div class="login__content">  
+        <form action="" class="login__form">
+          <div>
+            <h1 class="login__title"><span>Welcome</h1>
+            <p class="login__description">Fiche d'inscription</p>
+          </div>
+
+          <div>
+            <div class="login__inputs">
+              <div>
+                <label for="" class="login__label">Nom</label>
+                <input
+                  type="text"
+                  placeholder="Entrer votre nom de famille"
+                  required
+                  class="login__input"
+                />
+              </div>
+
+              <div>
+                <label for="" class="login__label">Prénom</label>
+                <div class="login__box">
+                  <input
+                    type="text"
+                    placeholder="Entrer votre prénom"
+                    required
+                    class="login__input"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="" class="login__label">Email</label>
+                <input
+                  type="email"
+                  placeholder="Entrer votre adresse e-mail"
+                  required
+                  class="login__input"
+                />
+              </div>
+
+              <div>
+                <label for="" class="login__label">Adresse</label>
+                <div class="login__box">
+                  <input
+                    type="text"
+                    placeholder="Entrer votre adresse"
+                    required
+                    class="login__input"
+                  />
+                </div>
+              </div> 
+              
+              <div>
+                <label for="" class="login__label">Ville</label>
+                <div class="login__box">
+                  <input
+                    type="text"
+                    placeholder="Entrer votre vile"
+                    required
+                    class="login__input"
+                  />
+                </div>
+              </div> 
+
+              <div>
+                <label for="quantity" class="login__label">Code postal</label>
+                <div class="login__box">
+                  <input
+                    type="number"
+                    placeholder="Entrer votre code postal"
+                    required
+                    class="login__input"
+                    min="1" 
+                    max="5"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="" class="login__label">Pays</label>
+                <div class="login__box">
+                  <input
+                    type="text"
+                    placeholder="Entrer votre pays"
+                    required
+                    class="login__input"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="" class="login__label">Télephone</label>
+                <div class="login__box">
+                  <input
+                    type="tel"
+                    placeholder="Entrer votre numéro de télephone"
+                    required
+                    class="login__input"
+                  />
+                </div>
+              </div> 
+
+              <div>
+                <label for="" class="login__label">Password</label>
+                <div class="login__box">
+                  <input
+                    type="password"
+                    placeholder="Entrer votre mot de passe"
+                    required
+                    class="login__input"
+                    id="input-pass"
+                  />
+                  <i class="ri-eye-off-line login__eye" id="input-icon"></i>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="login__check">
+              <input type="checkbox" class="login__check-input" />
+              <label for="" class="login__check-label">En cochant cette case, vous respectez les conditions d'utilisateurs de EcoService
+              </label>
+            </div>
+            <div class="login__check">
+              <input type="checkbox" class="login__check-input" />
+              <label for="" class="login__check-label">En cochant cette case, vous vous inscrivez sur notre newsletter
+
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <div class="login__buttons">
+              <button type="submit" class="login__button">Inscription</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--==================== FOOTER ====================-->
+  <footer class="footer">
+    <div class="footer__bg">
+      <img src="assets/img/coffee-beans-bg.png" alt="footer image" class="footer__bg-img">
+
+      <div class="footer__container container grid">
+        <div class="footer__data grid">
+          <div>
+            <a href="#" class="footer__logo">
+              <img src="../public/favicon.png" alt="logo image">
+              EcoService
+            </a>
+
+            <h3 class="footer__title">
+              Inscrivez-vous à notre newsletter
+            </h3>
+          </div>
+
+          <form action="" class="footer__form grid">
+            <input type="email" placeholder="Votre e-mail" class="footer__input">
+
+            <button class="button footer__button" type="submit">
+              Inscription
+            </button>
+
+            <p class="footer__description">
+              We care about your data. Read our
+              <a href="#" class="footer__privacy">Privacy Policy</a>
+            </p>
+          </form>
+        </div>
+
+        <div class="footer__data grid">
+          <div class="footer__social">
+            <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+              <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+              <i class="ri-twitter-fill"></i>
+            </a>
+          </div>
+
+          <span class="footer__copy">
+            &#169; Copyright ProTech. All rights reserved
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--========== SCROLL UP ==========-->
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+  </a>
+
+  <!--=============== SCROLLREVEAL ===============-->
+  <script src="/assets/js/scrollreveal.min.js"></script>
+
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+
+  <!--=============== MAIN JS ===============-->
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
