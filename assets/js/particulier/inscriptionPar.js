@@ -33,7 +33,7 @@ $(document).ready(function(){
                         mdp: pass
                     })
                 };
-                fetch('http://localhost:3000/addPar', requestOptions)
+                fetch('http://10.33.8.112:3000/addPar', requestOptions)
                     .then(res => {
                         const data = res.json();
                         if(res.status == '200'){

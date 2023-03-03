@@ -36,7 +36,7 @@ $(document).ready(function(){
             'Authorization': 'Bearer ' + token 
             },
     };
-    fetch(`http://localhost:3000/allProduitPar`, requestOptions)
+    fetch(`http://10.33.8.112:3000/allProduitPar`, requestOptions)
     .then(res => {return res.json();})
     .then(data =>{
         //console.log(data.products); 
