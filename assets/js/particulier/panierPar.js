@@ -4,7 +4,7 @@ $(document).ready(function(){
         window.location.href = "../../pages/particulier/profilPar.html";
     });
     $("#butPanier").click(function() {
-        window.location.href = "../../pages/particulier/panierPar.html";
+        window.location.href = "../../pages/particulier/accueil_produit.html";
     });
     $("#butLogin").click(function() {
         window.location.href = "../../pages/connexion.html";
