@@ -42,6 +42,64 @@ $(document).ready(function(){
         window.location.href = "./accueil_produit.html";
     });
     $("#addToProduit").click(function() {
-        window.location.href = "./accueil_produit.html";
+        fetch(`http://localhost:3000/aPanierPar`, options = {
+            method: 'GET',
+            headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token 
+            }
+        })
+        .then(res => {
+            if(res.status == 200){canShow = true; return res.json();}
+            else canShow =false;
+        })
+        .then(data => {
+            if(canShow){
+                //console.log(data.panier)
+                newPanier = data.panier;
+
+                //console.log(productId)
+                if(newPanier.Produits.includes(productId)){
+                    var index = newPanier.Produits.indexOf(productId);
+                    //console.log(newPanier[index]);
+                    newPanier[index]++
+                    //console.log(newPanier[index]);
+                }
+                else{
+                    newPanier.Produits.push(productId);
+                    newPanier.Quantites.push('1');
+                }
+                //console.log(newPanier);
+                var newProduits = '{'; var newQuantites = '{';
+                newPanier.Produits.forEach(element => {
+                    newProduits += `"${element}"`;
+                    newQuantites += `"${newPanier.Quantites[newPanier.Produits.indexOf(element)]}"`;
+                    if(newPanier.Produits.indexOf(element) < (newPanier.Produits.length -1)){
+                        newProduits += ", ";
+                        newQuantites += ", ";
+                    }
+                });
+                newProduits += '}'; newQuantites += '}';
+                
+                fetch(`http://localhost:3000/setPanierPar`, options = {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + token 
+                    },
+                    body: JSON.stringify({
+                        prix: newPanier.Prix,
+                        products: newProduits,
+                        quantites: newQuantites
+                    })
+                })
+                .then(res => {
+                    console.log(res.json());
+                    window.location.href = "./accueil_produit.html";
+                })
+                .catch(e => {console.log("***  "+e+" ***");})
+            }
+        })
+        .catch(e => {console.log("***  "+e+" ***");})
     });
   });
