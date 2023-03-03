@@ -12,7 +12,7 @@ $(document).ready(function(){
             },
         body: JSON.stringify({id: productId})
     };
-    fetch(`http://10.33.8.112:3000/aProduitPar`, requestOptions)
+    fetch(`http://localhost:3000/aProduitPar`, requestOptions)
     .then(res => {
         if(res.status == 200){
             canShow = true;
@@ -42,7 +42,7 @@ $(document).ready(function(){
         window.location.href = "./accueil_produit.html";
     });
     $("#addToProduit").click(function() {
-        fetch(`http://10.33.8.112:3000/aPanierPar`, options = {
+        fetch(`http://localhost:3000/aPanierPar`, options = {
             method: 'GET',
             headers: {
             'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ $(document).ready(function(){
                 });
                 newProduits += '}'; newQuantites += '}';
                 
-                fetch(`http://10.33.8.112:3000/setPanierPar`, options = {
+                fetch(`http://localhost:3000/setPanierPar`, options = {
                     method: 'POST',
                     headers: {
                     'Content-Type': 'application/json',
