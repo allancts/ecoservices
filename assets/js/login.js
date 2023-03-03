@@ -3,6 +3,7 @@ $(document).ready(function(){
     var url = 'loginPar';
     var tokenName = 'ecoservicesTokenPar';
     var hrefUrl = "../pages/particulier/accueil_produit.html";
+    var canLog = false;
 
     $("#switchLogin").click(function() {
         isPro = !isPro;
@@ -43,14 +44,19 @@ $(document).ready(function(){
             };
             fetch(`http://localhost:3000/${url}`, requestOptions)
             .then(res => {
-                const data = res.json();
                 if(res.status == 200){
-                    console.log(data.token);
-                    localStorage.setItem(tokenName, JSON.stringify(data.token));
-                    window.location.href = hrefUrl;
+                    canLog = true;
+                    return res.json();
                 }
                 else if (res.status == '401'){document.getElementById('error').textContent = "Login ou mot de passe incorrect";}
                 else{document.getElementById('error').textContent = "error"}
+            })
+            .then(data => {
+                if(canLog){
+                    //console.log(data.token);
+                    localStorage.setItem(tokenName, JSON.stringify(data.token));
+                    window.location.href = hrefUrl;
+                }
             })
             .catch(e => {console.log("***  "+e+" ***");});
         }
