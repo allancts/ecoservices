@@ -6,7 +6,7 @@ function addCart(produit){
           <h1 class="card__title">${produit.Label}</h1>
           <p class="card__description">${produit.Description}</p>
 
-          <a href="#" class="button">
+          <a href="../professionel/fiche_produit_pro.html?id=${produit.idProduitPro}" class="button">
             Voir l'article
           </a>
         </div>
@@ -22,13 +22,13 @@ function addCart(produit){
           <span class="card__shape"></span>
         </div>
       </article>`;
-      console.log(card);
+      //console.log(card);
       document.getElementById("listeProduits").insertAdjacentHTML("beforeend", card);
 }
 
 $(document).ready(function(){
 
-    const token = JSON.parse(localStorage.getItem('ecoservicesTokenPro')); console.log(token);
+    const token = JSON.parse(localStorage.getItem('ecoservicesTokenPro'));
     const requestOptions = {
         method: 'GET',
         headers: {

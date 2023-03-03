@@ -12,7 +12,11 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
   <!--=============== CSS ===============-->
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../../css/styles.css">
+
+  <!--=============== JS ===============-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="../../js/particulier/ficheProduit.js"></script>
 
   <title>EcoService</title>
 </head>
@@ -23,26 +27,15 @@
     <div class="header__border"></div>
 
     <nav class="nav container">
-      <a href="../../index.html" class="nav__logo">
-        <img src="../public/favicon.png" alt="logo">
+      <a href="../../../index.html" class="nav__logo">
+        <img src="../../public/favicon.png" alt="logo">
         EcoService
       </a>
 
-      <div class="nav__menu">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="./assets/pages/connexion.html" class="nav__link active-link">
-              <i class="ri-home-5-fill"></i>
-              <span>Connexion</span>
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">
-              <i class="ri-award-fill"></i>
-              <span>Inscription</span>
-            </a>
-          </li>
-        </ul>
+      <div>
+        <div class="button" id="butProfil">Profil</div>
+        <div class="button" id="butPanier">Panier</div>
+        <div class="button"id="butLogin">Déconnexion</div>
       </div>
     </nav>
   </header>
@@ -50,26 +43,30 @@
   <!--==================== FICHE PRODUIT ====================-->
   <div class="products__detail__container">
     <div class="products__detail__text">
-      <div class="products__detail__text__name">
-        Tablette de lessive
+      <div class="products__detail__text__name" id="label">
+        <!--Tablette de lessive-->
       </div>
       
-      <h2>Categorie</h2>
-      <h3>29,99 $</h3>
+      <!--<h2>Categorie</h2>-->
+      <h3 id="prix"><!--29,99 $--></h3>
 
       <h4>Description :</h4>
-      <div class="products__detail__description">
-        Wa les description de fou furieux c;est incrpyable le PRODUIT
-        juste parce que yan ta grossee daronne dessus
+      <div class="products__detail__description" id="description">
+        <!--Wa les description de fou furieux c;est incrpyable le PRODUIT
+        juste parce que yan ta grossee daronne dessus-->
       </div>
 
-      <div class="button">
+      <div class="button" id="addToProduit">
         Ajouter au panier
+      </div>
+
+      <div class="button" id="goBack">
+        Retourner à la liste de produit
       </div>
 
     </div>
     <div class="products__detail__img">
-      <img id="imageRemove" src="../public/image_test.png" alt="img__products__details">
+      <img id="imageRemove" src="../../public/image_test.png" alt="img__products__details">
     </div>
   </div>
 
@@ -82,7 +79,7 @@
         <div class="footer__data grid">
           <div>
             <a href="#" class="footer__logo">
-              <img src="../public/favicon.png" alt="logo image">
+              <img src="../../public/favicon.png" alt="logo image">
               EcoService
             </a>
 
@@ -132,13 +129,13 @@
   </a>
 
   <!--=============== SCROLLREVEAL ===============-->
-  <script src="/assets/js/scrollreveal.min.js"></script>
+  <script src="../../js/scrollreveal.min.js"></script>
 
   <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
 
   <!--=============== MAIN JS ===============-->
-  <script src="../js/main.js"></script>
+  <script src="../../js/main.js"></script>
 </body>
 
 </html>

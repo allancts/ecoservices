@@ -12,7 +12,11 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
   <!--=============== CSS ===============-->
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../../css/styles.css">
+
+  <!--=============== JS ===============-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="../../js/professionel/ficheProduit_pro.js"></script>
 
   <title>EcoService</title>
 </head>
@@ -23,61 +27,47 @@
     <div class="header__border"></div>
 
     <nav class="nav container">
-      <a href="../../index.html" class="nav__logo">
-        <img src="../public/favicon.png" alt="logo">
+      <a href="../../../index.html" class="nav__logo">
+        <img src="../../public/favicon.png" alt="logo">
         EcoService
       </a>
 
       <div>
-        <div class="button">Profil</div>
-        <div class="button">Panier</div>
-        <div class="button">Déconnexion</div>
+        <div class="button" id="butProfil">Profil</div>
+        <div class="button" id="butPanier">Panier</div>
+        <div class="button"id="butLogin">Déconnexion</div>
       </div>
     </nav>
   </header>
 
-  <!--==================== CART PAGE ====================-->
-  <div class="cart__container">
-    <table>
-      <tr>
-        <th>Produit</th>
-        <th>Quantité</th>
-        <th>Coût-total</th>
-      </tr>
-      <tr>
-        <td>
-          <div class="cart__info">
-            <div class="cart__img">
-              <img src="../public/image_test.png">
-            </div>
-            <div>
-              <p>Tablette de lessive</p>
-              <small>Price: 50.00 €</small>
-              <a href="">Retirer</a>
-            </div>
-          </div>
-        </td>
-        <td><input type="number" value="1"></td>
-        <td>50.00 €</td>
-      </tr>
-
-      <div class="cart__subtotal">
-        <table>
-          <tr>
-            <td>Coût-total</td>
-            <td>50.00 €</td>
-          </tr>
-          <tr>
-            <td>Taxe</td>
-            <td>20.00 €</td>
-          </tr>
-          <tr>
-            <td>Coût-total</td>
-            <td>70.00 €</td>
-          </tr>
-        </table>
+  <!--==================== FICHE PRODUIT ====================-->
+  <div class="products__detail__container">
+    <div class="products__detail__text">
+      <div class="products__detail__text__name" id="label">
+        <!--Tablette de lessive-->
       </div>
-    </table>
+      
+      <!--<h2>Categorie</h2>-->
+      <h3 id="prix"><!--29,99 $--></h3>
+
+      <h4>Description :</h4>
+      <div class="products__detail__description" id="description">
+        <!--Wa les description de fou furieux c;est incrpyable le PRODUIT
+        juste parce que yan ta grossee daronne dessus-->
+      </div>
+
+      <div class="button" id="addToProduit">
+        Ajouter au panier
+      </div>
+
+      <div class="button" id="goBack">
+        Retourner à la liste de produit
+      </div>
+
+    </div>
+    <div class="products__detail__img">
+      <img id="imageRemove" src="../../public/image_test.png" alt="img__products__details">
+    </div>
   </div>
 
   <!--==================== FOOTER ====================-->
@@ -89,7 +79,7 @@
         <div class="footer__data grid">
           <div>
             <a href="#" class="footer__logo">
-              <img src="../public/favicon.png" alt="logo image">
+              <img src="../../public/favicon.png" alt="logo image">
               EcoService
             </a>
 
@@ -139,13 +129,13 @@
   </a>
 
   <!--=============== SCROLLREVEAL ===============-->
-  <script src="/assets/js/scrollreveal.min.js"></script>
+  <script src="../../js/scrollreveal.min.js"></script>
 
   <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
 
   <!--=============== MAIN JS ===============-->
-  <script src="../js/main.js"></script>
+  <script src="../../js/main.js"></script>
 </body>
 
 </html>
