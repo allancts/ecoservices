@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="../js/login.js"></script>
+
+</head>
+<body>
+    <center>
+        <h1>Connexion <span id="info">Particulier</span></h1>
+
+        <button type="button" id="loginPar">Login Particulier</button>
+        <button type="button" id="loginPro">Login Professionel</button>
+        <br><br>
+
+        <div>
+            <label for="input-mail" class="login__label">Email</label>
+            <input
+              type="email"
+              placeholder="Entrer votre adresse e-mail"
+              id="input-mail"
+            />
+        </div>
+
+        <div>
+            <label for="input-pass">Password</label>
+            <input
+                type="password"
+                placeholder="Entrer votre mot de passe"
+                id="input-pass"
+            />
+        </div>
+        <br>
+        <button type="button" id="butLogin">Login</button>
+
+        <h3 style="color:red"><span id="error"></span></h3>
+
+    </center>
+    
+</body>
+</html>

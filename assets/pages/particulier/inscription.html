@@ -12,7 +12,11 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
   <!--=============== CSS ===============-->
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../../css/styles.css">
+
+    <!--=============== JS ===============-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="../../js/particulier/inscriptionPar.js"></script>
 
   <title>EcoService</title>
 </head>
@@ -23,15 +27,15 @@
     <div class="header__border"></div>
 
     <nav class="nav container">
-      <a href="../../index.html" class="nav__logo">
-        <img src="../public/favicon.png" alt="logo">
+      <a href="../../../index.html" class="nav__logo">
+        <img src="../../public/favicon.png" alt="logo">
         EcoService
       </a>
 
       <div class="nav__menu">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="./assets/pages/connexion.html" class="nav__link active-link">
+            <a href="../connexion.html" class="nav__link active-link">
               <i class="ri-home-5-fill"></i>
               <span>Connexion</span>
             </a>
@@ -51,7 +55,7 @@
   <div class="products__inscription">
     <div class="container">
       <div class="login__content">  
-        <form action="" class="login__form">
+        <form autocomplete="off" class="login__form">
           <div>
             <h1 class="login__title"><span>Welcome</h1>
             <p class="login__description">Fiche d'inscription</p>
@@ -60,34 +64,36 @@
           <div>
             <div class="login__inputs">
               <div>
-                <label for="" class="login__label">Nom</label>
+                <label for="" class="login__label">Nom *</label>
                 <input
                   type="text"
                   placeholder="Entrer votre nom de famille"
-                  required
                   class="login__input"
+                  id="input-nom"
                 />
               </div>
 
               <div>
-                <label for="" class="login__label">Prénom</label>
+                <label for="" class="login__label">Prénom *</label>
                 <div class="login__box">
                   <input
                     type="text"
                     placeholder="Entrer votre prénom"
                     required
                     class="login__input"
+                    id="input-prenom"
                   />
                 </div>
               </div>
 
               <div>
-                <label for="" class="login__label">Email</label>
+                <label for="" class="login__label">Email *</label>
                 <input
                   type="email"
                   placeholder="Entrer votre adresse e-mail"
                   required
                   class="login__input"
+                  id="input-mail"
                 />
               </div>
 
@@ -99,9 +105,10 @@
                     placeholder="Entrer votre adresse"
                     required
                     class="login__input"
+                    id="input-adr"
                   />
                 </div>
-              </div> 
+              </div>
               
               <div>
                 <label for="" class="login__label">Ville</label>
@@ -111,9 +118,10 @@
                     placeholder="Entrer votre vile"
                     required
                     class="login__input"
+                    id="input-ville"
                   />
                 </div>
-              </div> 
+              </div>
 
               <div>
                 <label for="quantity" class="login__label">Code postal</label>
@@ -122,9 +130,9 @@
                     type="number"
                     placeholder="Entrer votre code postal"
                     required
+                    min="0"
                     class="login__input"
-                    min="1" 
-                    max="5"
+                    id="input-cp"
                   />
                 </div>
               </div>
@@ -137,6 +145,7 @@
                     placeholder="Entrer votre pays"
                     required
                     class="login__input"
+                    id="input-pays"
                   />
                 </div>
               </div>
@@ -149,12 +158,13 @@
                     placeholder="Entrer votre numéro de télephone"
                     required
                     class="login__input"
+                    id="input-tel"
                   />
                 </div>
               </div> 
 
               <div>
-                <label for="" class="login__label">Password</label>
+                <label for="" class="login__label">Password *</label>
                 <div class="login__box">
                   <input
                     type="password"
@@ -184,11 +194,11 @@
 
           <div>
             <div class="login__buttons">
-              <button type="submit" class="login__button">Inscription</button>
+              <button type="button" id="butInscription" class="login__button">Inscription</button>
             </div>
           </div>
-
-          <a href="inscription_pro.html" class="login__forgot">Vous etes un professionnel ?</a>
+          <a class="login__forgot" style="color: red"><span id="error"></span></a>
+          <a href="../professionel/inscription_pro.html" class="login__forgot">Vous etes un professionnel ?</a>
 
         </form>
       </div>
@@ -196,7 +206,7 @@
   </div>
 
   <!--==================== FOOTER ====================-->
-  <footer class="footer">
+  <footer class="footer" style="display: none;">
     <div class="footer__bg">
       <img src="assets/img/coffee-beans-bg.png" alt="footer image" class="footer__bg-img">
 
@@ -204,7 +214,7 @@
         <div class="footer__data grid">
           <div>
             <a href="#" class="footer__logo">
-              <img src="../public/favicon.png" alt="logo image">
+              <img src="../../public/favicon.png" alt="logo image">
               EcoService
             </a>
 
@@ -260,7 +270,7 @@
 
 
   <!--=============== MAIN JS ===============-->
-  <script src="../js/main.js"></script>
+  <script src="../../js/main.js"></script>
 </body>
 
 </html>

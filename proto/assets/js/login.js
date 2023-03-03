@@ -4,25 +4,19 @@ $(document).ready(function(){
     var tokenName = 'ecoservicesTokenPar';
     var hrefUrl = "../pages/particulier/cataloguePar.html";
 
-    $("#switchLogin").click(function() {
-        isPro = !isPro;
-
-        if(!isPro){
-            url = 'loginPar';
-            console.log("par");
-            tokenName = 'ecoservicesTokenPar';
-            hrefUrl = "../pages/particulier/cataloguePar.html";
-            document.getElementById('txtSwitch').textContent = "Professionel";
-            document.getElementById('butInscription').href = "./particulier/inscription.html";
-        }
-        else{
-            url = 'loginPro';
-            tokenName = 'ecoservicesTokenPro';
-            hrefUrl = "../pages/professionel/cataloguePro.html";
-            document.getElementById('txtSwitch').textContent = "Particulier";
-            document.getElementById('butInscription').href = "./professionel/inscription_pro.html";
-        }
-        
+    $("#loginPar").click(function() {
+        isPro = false;
+        url = 'loginPar';
+        tokenName = 'ecoservicesTokenPar';
+        hrefUrl = "../pages/particulier/cataloguePar.html";
+        document.getElementById('info').textContent = "Particulier";
+    });
+    $("#loginPro").click(function() {
+        isPro = true;
+        url = 'loginPro';
+        tokenName = 'ecoservicesTokenPro';
+        hrefUrl = "../pages/professionel/cataloguePro.html";
+        document.getElementById('info').textContent = "Professionel";
     });
 
     $("#butLogin").click(function() {

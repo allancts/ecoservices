@@ -12,7 +12,11 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
   <!--=============== CSS ===============-->
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../../css/styles.css">
+
+    <!--=============== JS ===============-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="../../js/professionel/inscriptionPro.js"></script>
 
   <title>EcoService</title>
 </head>
@@ -23,15 +27,15 @@
     <div class="header__border"></div>
 
     <nav class="nav container">
-      <a href="../../index.html" class="nav__logo">
-        <img src="../public/favicon.png" alt="logo">
+      <a href="../../../index.html" class="nav__logo">
+        <img src="../../public/favicon.png" alt="logo">
         EcoService
       </a>
 
       <div class="nav__menu">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="./assets/pages/connexion.html" class="nav__link active-link">
+            <a href="../connexion.html" class="nav__link active-link">
               <i class="ri-home-5-fill"></i>
               <span>Connexion</span>
             </a>
@@ -48,7 +52,7 @@
   </header>
 
   <!--==================== FORM CONNEXION ====================-->
-  <div class="products__inscription">
+  <div class="products__connexion__pro">
     <div class="container">
       <div class="login__content">  
         <form action="" class="login__form">
@@ -60,106 +64,116 @@
           <div>
             <div class="login__inputs">
               <div>
-                <label for="" class="login__label">Nom</label>
+                <label for="" class="login__label">Nom *</label>
                 <input
                   type="text"
                   placeholder="Entrer votre nom de famille"
-                  required
+                  id="input-name"
                   class="login__input"
                 />
               </div>
 
               <div>
-                <label for="" class="login__label">Prénom</label>
+                <label for="" class="login__label">Responsable *</label>
                 <div class="login__box">
                   <input
                     type="text"
-                    placeholder="Entrer votre prénom"
-                    required
+                    placeholder="Entrer le nom et prénom de votre responsable"
+                    id="input-manager"
                     class="login__input"
                   />
                 </div>
               </div>
 
               <div>
-                <label for="" class="login__label">Email</label>
+                <label for="" class="login__label">Email *</label>
                 <input
                   type="email"
                   placeholder="Entrer votre adresse e-mail"
-                  required
+                  id="input-mail"
                   class="login__input"
                 />
               </div>
 
               <div>
-                <label for="" class="login__label">Adresse</label>
+                <label for="" class="login__label">SIRET *</label>
+                <div class="login__box">
+                  <input
+                    type="text"
+                    placeholder="Entrer le SIRET de votre entreprise"
+                    id="input-siret"
+                    class="login__input"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="" class="login__label">Adresse *</label>
                 <div class="login__box">
                   <input
                     type="text"
                     placeholder="Entrer votre adresse"
-                    required
+                    id="input-adr"
                     class="login__input"
                   />
                 </div>
               </div> 
               
               <div>
-                <label for="" class="login__label">Ville</label>
+                <label for="" class="login__label">Ville *</label>
                 <div class="login__box">
                   <input
                     type="text"
                     placeholder="Entrer votre vile"
-                    required
+                    id="input-ville"
                     class="login__input"
                   />
                 </div>
-              </div> 
+              </div>
 
               <div>
-                <label for="quantity" class="login__label">Code postal</label>
+                <label for="quantity" class="login__label">Code postal *</label>
                 <div class="login__box">
                   <input
                     type="number"
                     placeholder="Entrer votre code postal"
-                    required
+                    id="input-cp"
                     class="login__input"
                     min="1" 
-                    max="5"
                   />
                 </div>
               </div>
 
               <div>
-                <label for="" class="login__label">Pays</label>
+                <label for="" class="login__label">Pays *</label>
                 <div class="login__box">
                   <input
                     type="text"
                     placeholder="Entrer votre pays"
-                    required
+                    id="input-pays"
                     class="login__input"
                   />
                 </div>
               </div>
 
               <div>
-                <label for="" class="login__label">Télephone</label>
+                <label for="" class="login__label">Télephone *</label>
                 <div class="login__box">
                   <input
                     type="tel"
                     placeholder="Entrer votre numéro de télephone"
-                    required
+                    id="input-tel"
                     class="login__input"
                   />
                 </div>
-              </div> 
+              </div>
 
               <div>
-                <label for="" class="login__label">Password</label>
+                <label for="" class="login__label">Password *</label>
                 <div class="login__box">
                   <input
                     type="password"
                     placeholder="Entrer votre mot de passe"
-                    required
                     class="login__input"
                     id="input-pass"
                   />
@@ -184,11 +198,11 @@
 
           <div>
             <div class="login__buttons">
-              <button type="submit" class="login__button">Inscription</button>
+              <button type="button" id="butInscription" class="login__button">Inscription</button>
             </div>
           </div>
-
-          <a href="inscription_pro.html" class="login__forgot">Vous etes un professionnel ?</a>
+          <a class="login__forgot" style="color: red"><span id="error"></span></a>
+          <a href="../particulier/inscription.html" class="login__forgot">Vous etes un particulier ?</a>
 
         </form>
       </div>
@@ -196,7 +210,7 @@
   </div>
 
   <!--==================== FOOTER ====================-->
-  <footer class="footer">
+  <footer class="footer" style="display:none">
     <div class="footer__bg">
       <img src="assets/img/coffee-beans-bg.png" alt="footer image" class="footer__bg-img">
 
@@ -204,7 +218,7 @@
         <div class="footer__data grid">
           <div>
             <a href="#" class="footer__logo">
-              <img src="../public/favicon.png" alt="logo image">
+              <img src="../../public/favicon.png" alt="logo image">
               EcoService
             </a>
 
@@ -260,7 +274,7 @@
 
 
   <!--=============== MAIN JS ===============-->
-  <script src="../js/main.js"></script>
+  <script src="../../js/main.js"></script>
 </body>
 
 </html>

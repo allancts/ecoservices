@@ -1,17 +1,285 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Accueil</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="assets/public/favicon.png" type="image/x-icon">
+
+  <!--=============== REMIXICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <title>EcoService</title>
 </head>
+
 <body>
-    <center>
-        <h1>Accueil</h1>
-        <br>
-        <a href="./assets/pages/connexion.html">Connexion</a>
-        <a href="./assets/pages/particulier/inscriptionPar.html">inscriptionPar</a>
-        <a href="./assets/pages/professionel/inscriptionPro.html">inscriptionPro</a>
-    </center>
-    
+  <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <div class="header__border"></div>
+
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">
+          <img src="assets/public/favicon.png" alt="logo">
+          EcoService
+        </a>
+
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./assets/pages/connexion.html" class="nav__link active-link">
+                <i class="ri-home-5-fill"></i>
+                <span>Connexion</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="./assets/pages/inscription.html" class="nav__link">
+                <i class="ri-award-fill"></i>
+                <span>Inscription</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+  <!--==================== MAIN ====================-->
+  <main class="main">
+    <!--==================== HOME ====================-->
+    <section class="home section" id="home">
+      <div class="home__container container grid">
+        <div class="home__data">
+          <h3 class="home__subtitle">
+            Un service éco-responable
+          </h3>
+
+          <h1 class="home__title">
+            It's time for a <br>
+            test series
+          </h1>
+
+          <p class="home__description">
+            Chaque produit est pensé pour être.
+            Éco-responsables de l'environnement.
+            Bienvenue sur EcoService !
+          </p>
+
+          <a href="#" class="button">
+            Connexion <i class="ri-arrow-right-s-line"></i>
+          </a>
+        </div>
+
+        <img src="assets/public/EcoHero.png" alt="home image" class="home__img">
+      </div>
+    </section>
+
+    <!--==================== PRODUCTS ====================-->
+    <section class="products">
+      <div class="products__bg section">
+        <div class="products__container container grid">
+          <div class="products__data">
+            <a href="#about" class="products__button">
+              Scroll Down <i class="ri-arrow-down-s-line"></i>
+            </a>
+
+            <p class="products__description">
+              Nous proposons en continue des produits
+              qui sont uniquement éco-responable.
+              Nous sommes ainsi reliés avec des fournisseurs
+              qui eux aussi profite d'un écosysteme éco-responable
+              au sein même de leurs entreprise et de leurs valeurs
+              autour de la production de leur produit.
+            </p>
+          </div>
+
+          <div class="products__content">
+            <article class="products__card">
+              <img src="assets/img/product-coffee-1.png" alt="products image" class="products__img">
+              <h3 class="products__name">Produit 1</h3>
+              <span class="products__price">$17.90</span>
+            </article>
+            <article class="products__card">
+              <img src="assets/img/product-coffee-2.png" alt="products image" class="products__img">
+              <h3 class="products__name">Produit 2</h3>
+              <span class="products__price">$24.90</span>
+            </article>
+            <article class="products__card">
+              <img src="assets/img/product-coffee-3.png" alt="products image" class="products__img">
+              <h3 class="products__name">Produit 3</h3>
+              <span class="products__price">$32.90</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== ABOUT ====================-->
+    <section class="about" id="about">
+      <div class="about__bg section">
+        <div class="about__container container grid">
+          <div class="about__data">
+            <h2 class="section__title">
+              EcoService : une histoire
+            </h2>
+
+            <p class="about__description">
+              histoire a raconte sur EcoService
+            </p>
+          </div>
+
+          <img src="assets/img/about-coffee.png" alt="About image" class="about__img">
+        </div>
+      </div>
+    </section>
+
+    <!--==================== STEPS ====================-->
+    <section class="steps" id="steps">
+      <div class="steps__bg section">
+        <h2 class="section__title">
+          Eco-responsable en 3 étapes
+        </h2>
+
+        <div class="steps__container container grid">
+          <img src="assets/img/coffee-beans-bg.png" alt="steps bg image" class="steps__bg-img">
+
+          <div class="steps__content">
+            <img src="assets/img/steps-curve-line.svg" alt="steps image" class="steps__border">
+
+            <div class="steps__card">
+              <div class="steps__circle">
+                <div class="steps__subcircle">
+                  01
+                </div>
+
+                <img src="#x²" alt="steps image" class="steps__img">
+              </div>
+
+              <p class="steps__description">
+                Le choix des matières ont un poids considérable dans son impact environnemental.
+                Nous choisissons parmi une liste les matières éco-responables de manière éthique. 
+              </p>
+            </div>
+            <div class="steps__card steps__card-move">
+              <div class="steps__circle">
+                <div class="steps__subcircle">
+                  02
+                </div>
+
+                <img src=#" alt="steps image" class="steps__img">
+              </div>
+
+              <p class="steps__description">
+                Le produit doit être aussi fabriqué dans des conditions socialement acceptables pour
+                être éco-responable.
+              </p>
+            </div>
+            <div class="steps__card">
+              <div class="steps__circle">
+                <div class="steps__subcircle">
+                  03
+                </div>
+
+                <img src="#" alt="steps image" class="steps__img">
+              </div>
+
+              <p class="steps__description">
+                Les produits que nous proposons sont labélisés qui répond aux critères sociaux et environnementaux.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== TESTIMONIAL ====================-->
+    <section class="testimonial" id="testimonial">
+      <div class="testimonial__bg section">
+        <div class="testimonial__container container grid">
+          <div class="testimonial__data">
+            <h2 class="section__title">
+              "EcoService c'est terrible"
+            </h2>
+
+            <span class="testimonial__name">
+              Jhon Doe
+            </span>
+          </div>
+
+          <img src="assets/img/testimonial-coffee.png" alt="Testimonial image" class="testimonial__img">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--==================== FOOTER ====================-->
+  <footer class="footer">
+    <div class="footer__bg">
+
+      <div class="footer__container container grid">
+        <div class="footer__data grid">
+          <div>
+            <a href="#" class="footer__logo">
+              <img src="assets/public/favicon.png" alt="logo image">
+              EcoService
+            </a>
+
+            <h3 class="footer__title">
+              Inscrivez-vous à notre newsletter
+            </h3>
+          </div>
+
+          <form action="" class="footer__form grid">
+            <input type="email" placeholder="Votre e-mail" class="footer__input">
+
+            <button class="button footer__button" type="submit">
+              Inscription
+            </button>
+
+            <p class="footer__description">
+              We care about your data. Read our
+              <a href="#" class="footer__privacy">Privacy Policy</a>
+            </p>
+          </form>
+        </div>
+
+        <div class="footer__data grid">
+          <div class="footer__social">
+            <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+              <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+              <i class="ri-twitter-fill"></i>
+            </a>
+          </div>
+
+          <span class="footer__copy">
+            &#169; Copyright ProTech. All rights reserved
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--========== SCROLL UP ==========-->
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+  </a>
+
+  <!--=============== SCROLLREVEAL ===============-->
+  <script src="/assets/js/scrollreveal.min.js"></script>
+
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
