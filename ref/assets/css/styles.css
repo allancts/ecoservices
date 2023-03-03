@@ -1359,3 +1359,70 @@ img {
     grid-template-columns: repeat(3, 328px);
   }
 }
+
+/*=============== CARD ===============*/
+
+.cart__container {
+  margin: 10% auto;
+  color: var(--second-color);
+}
+
+table{
+ width: 100%;
+ border-collapse: collapse; 
+}
+
+.cart__info{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+th{
+  text-align: left;
+  padding: 5px;
+  color: #fff;
+  background: var(--second-color);
+  font-weight: var(--font-medium);
+}
+
+td{
+  padding: 10px;
+}
+td input{
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+.cart__img{
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.cart__subtotal{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart__subtotal table{
+  border-top: 3px solid #000;
+  width: 100%;
+  max-width: 350px;
+}
+
+td:last-child{
+  text-align: right;
+}
+
+th:last-child{
+  text-align: right ;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 600px){
+  .card__info{
+    display: none;
+  }
+}
