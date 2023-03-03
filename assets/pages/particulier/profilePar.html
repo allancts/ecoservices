@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="../../js/particulier/profilePar.js"></script>
+
+</head>
+<body>
+    <center>
+        <div>
+            <div class="login__inputs">
+              <div>
+                <label for="" class="login__label">Nom :</label>
+                <input
+                  type="text"
+                  placeholder="Entrer votre nom de famille"
+                  class="login__input"
+                  id="input-nom"
+                />
+              </div>
+
+              <div>
+                <label for="" class="login__label">Prénom :</label>
+                <div class="login__box">
+                  <input
+                    type="text"
+                    placeholder="Entrer votre prénom"
+                    required
+                    class="login__input"
+                    id="input-prenom"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="" class="login__label">Email :</label>
+                <input
+                  type="email"
+                  placeholder="Entrer votre adresse e-mail"
+                  required
+                  class="login__input"
+                  id="input-mail"
+                />
+              </div>
+
+              <div>
+                <label for="" class="login__label">Adresse :</label>
+                <div class="login__box">
+                  <input
+                    type="text"
+                    placeholder="Entrer votre adresse"
+                    required
+                    class="login__input"
+                    id="input-adr"
+                  />
+                </div>
+              </div> 
+              
+              <div>
+                <label for="" class="login__label">Ville :</label>
+                <div class="login__box">
+                  <input
+                    type="text"
+                    placeholder="Entrer votre vile"
+                    required
+                    class="login__input"
+                    id="input-ville"
+                  />
+                </div>
+              </div> 
+
+              <div>
+                <label for="quantity" class="login__label">Code postal :</label>
+                <div class="login__box">
+                  <input
+                    type="number"
+                    placeholder="Entrer votre code postal"
+                    required
+                    min="0"
+                    class="login__input"
+                    id="input-cp"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="" class="login__label">Pays :</label>
+                <div class="login__box">
+                  <input
+                    type="text"
+                    placeholder="Entrer votre pays"
+                    required
+                    class="login__input"
+                    id="input-pays"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="" class="login__label">Télephone :</label>
+                <div class="login__box">
+                  <input
+                    type="tel"
+                    placeholder="Entrer votre numéro de télephone"
+                    required
+                    class="login__input"
+                    id="input-tel"
+                  />
+                </div>
+              </div> 
+            </div>
+          </div>
+
+          <div>
+            <div class="login__buttons">
+              <button type="button" id="butSave" class="login__button">Enregistrer</button>
+            </div>
+          </div>
+          <h3 style="color:red"><span id="error"></span></h3>
+
+    </center>
+    
+</body>
+</html>
