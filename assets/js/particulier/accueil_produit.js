@@ -39,7 +39,7 @@ $(document).ready(function(){
     fetch(`http://localhost:3000/allProduitPar`, requestOptions)
     .then(res => {return res.json();})
     .then(data =>{
-        //console.log(data.products); 
+        console.log(data.products); 
         const produits = data.products;
         produits.forEach(element => {addCart(element)});
     })
