@@ -34,7 +34,7 @@ $(document).ready(function(){
                         siret: siret,
                     })
                 };
-                fetch('http://10.33.8.112:3000/addPro', requestOptions)
+                fetch('http://localhost:3000/addPro', requestOptions)
                     .then(res => {
                         const data = res.json();
                         if(res.status == '200'){

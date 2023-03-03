@@ -42,7 +42,7 @@ $(document).ready(function(){
                     mdp: pass
                 })
             };
-            fetch(`http://10.33.8.112:3000/${url}`, requestOptions)
+            fetch(`http://localhost:3000/${url}`, requestOptions)
             .then(res => {
                 if(res.status == 200){
                     canLog = true;
